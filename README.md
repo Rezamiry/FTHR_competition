@@ -6,7 +6,7 @@ For testing, our model requires the historical statistics of horse/jockey/traine
 
 Consider the following steps for reproducing the results:
 1. copy the dataset parquet file in the same folder as the scripts/notebooks
-2. run the extract_historical_features.py. Consider using the provided script for submitting a job to the CC server.
+2. run the extract_historical_features.py. (Consider using the provided script for submitting a job to the CC server. `sbatch trot_sbatch.sh extract_historical_features`)
 3. run the feature_engineering.ipynb notebook.
 4. run the modeling.ipynb notebook. (for parameter tuning we used CC)
 5. go through testing.ipynb notebook to see the final results
