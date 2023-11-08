@@ -32,7 +32,7 @@ For example, the beatenMargin can determine how close were the first and second 
 ### Training data:
 It only make sense to use all of one match data to predict the probability of wining. Hence, each instance in the training/validation/test is the information of one match. Each row of this two dimensional matrix is the features of one contestant.
 Because each match have different number of contestants, we padded all matches to have 20 rows (add zero rows to the end of each instance).
-At the end each training instance was in the shape: (20,210)
+At the end each training instance was in the shape: (20,210) \
 Training set: anything before (2020,11,1) \
 Validation set: anything between (2020,11,1) and (2021,11,1) \
 Test set size: anything after (2021,11,1)
