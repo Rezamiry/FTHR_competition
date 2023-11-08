@@ -26,7 +26,7 @@ There is one bug in this part that caused the horse/jockey/trainer average finis
 Most of the features in the dataset are features that are categorical either because of their nature (Gender, RaceCondition, etc.) or we did not know the exact meaning of hence we one-hot encoded them.
 The rest of them were numerical such as horseAge and we did not change them.
 We scaled all features using MinMaxScaler so all of them are in the same range.
-We created a target variable based on four performance metrics: finishPosition, PRPrice, PIRPosition, and BeatenMargin. We included all of these performance metrics to have better discrimination between participants.
+We created a target variable based on four performance metrics: finishPosition, PriceSP, PIRPosition, and BeatenMargin. We included all of these performance metrics to have better discrimination between participants.
 For example, the beatenMargin can determine how close were the first and second positions.
 
 ### Training data:
@@ -44,5 +44,6 @@ The next layers will have horizontal kernels hence fusing the participant featur
 The final layers are fully connected layers and softmax for predicting the target variable (win probability).
 
 
-
+### Test set evaluation
+We added some zeror rows to each race so they have the same size. Also we shuffled the rows so that the model generalize better. Hence to see the prediction for the rest set, one should use the information of raceID and HorseID which is saved in the test_set_prediction.pkl. (more information in the end of testing.ipynb)
 
